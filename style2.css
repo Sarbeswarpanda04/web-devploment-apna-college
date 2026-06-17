@@ -1,0 +1,168 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f2f2;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #b92b27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Login & Signup Buttons */
+#login,
+#signup {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#login {
+    background-color: #ffffff;
+    color: #333;
+    border: 3px solid #ccc;
+}
+
+#signup {
+    background-color: #b92b27;
+    color: white;
+    border: 3px solid #ccc;
+}
+
+#login:hover {
+    background-color: #b92b27;
+    color: white;
+}
+
+#signup:hover {
+    background-color: #ffffff;
+    color: #b92b27;
+}
+
+/* Inputs */
+header div {
+    margin: 15px 0;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b92b27;
+}
+
+/* Question Cards */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main p,
+main h3,
+main span {
+    margin-left: 10px;
+}
+
+main hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+h3 {
+    margin: 8px 0;
+}
+
+/* Follow Link */
+.follow {
+    text-decoration: none;
+    color: #2e69ff;
+    font-weight: bold;
+}
+
+.follow:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.upvote,
+.answer {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.upvote {
+    background-color: #ffebe8;
+    color: #b92b27;
+}
+
+.answer {
+    background-color: #2e69ff;
+    color: white;
+}
+
+.upvote:hover {
+    background-color: #ffd8d2;
+}
+
+.answer:hover {
+    background-color: #1f55e0;
+}
+
+/* Question Section */
+main > p,
+main > h3,
+main > span {
+    background-color: white;
+    padding-left: 15px;
+}
+
+main > p {
+    padding-top: 15px;
+}
+
+main > span {
+    display: block;
+    padding-bottom: 15px;
+}

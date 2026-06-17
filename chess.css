@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Outer Container: Cleaned up track sizing to prevent squishing */
+.chess-container {
+    display: grid;
+    grid-template-columns: 40px 480px 40px; /* Increased side padding for labels */
+    grid-template-rows: 40px 480px 40px;    /* Increased top/bottom padding for pieces */
+    background-color: #333; 
+    padding: 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.808);
+}
+
+
+/* Position wrappers precisely into their grid tracks */
+.top-files    { grid-column: 2; grid-row: 1; }
+.bottom-files { grid-column: 2; grid-row: 3; }
+.left-ranks   { grid-column: 1; grid-row: 2; }
+.right-ranks  { grid-column: 3; grid-row: 2; }
+#board        { grid-column: 2; grid-row: 2; }
+
+/* Sub-grids to center labels perfectly */
+.files-row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+}
+.ranks-col {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+/* The Chess Board: Keeps squares perfectly contained */
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 100%;
+    height: 100%;
+    border: 2px solid #333;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevents chess piece images from spilling out */
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure your chess piece images scale nicely inside the squares */
+.square img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.white { background-color: hsl(66, 44%, 87%); }
+.white:hover { background-color: hsl(65, 100%, 87%); }
+.black { background-color: #b58863; }
+.black:hover { background-color: hsl(25, 100%, 30%); }

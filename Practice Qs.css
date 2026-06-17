@@ -1,0 +1,14 @@
+* {
+    font-family: courier new;
+}
+h1 {
+    color: #1b74e4;
+}
+#searchbtn {
+    background-color: #000000;
+    color: white;
+}
+.userbtn {
+    background-color: #1b74e4;
+    color: white;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiranga with Flying Animation</title>
+    <style>
+        body {
+            background-color: hsl(200, 100%, 62%);
+            overflow: hidden;
+            /* Prevents scrollbars from appearing due to falling petals */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container to place the flagpole and flag side-by-side */
+        .flag-structure {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
+        /* The Flagpole */
+        #bar {
+            background-color: #8B4513;
+            /* Wooden brown */
+            width: 15px;
+            height: 450px;
+            border-radius: 5px 0 0 5px;
+            z-index: 2;
+            /* Keeps the pole structurally in front */
+        }
+
+        /* --- Flower Petals Styling & Animation --- */
+        .petal {
+            position: absolute;
+            background-color: #ffb7c5;
+            /* Soft rose pink petal color */
+            border-radius: 150% 0 150% 0;
+            /* Creates a realistic leaf/petal shape */
+            opacity: 0.8;
+            z-index: 1;
+            animation: shower 7s linear infinite;
+        }
+
+
+        /* Container for the three stripes + Waving Animation */
+        .flag-stripes {
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            /* Animation Properties */
+            animation: fly 3s ease-in-out infinite alternate;
+            transform-origin: left center;
+            /* Keeps the flag anchored to the pole */
+        }
+
+        #top {
+            background-color: #FF9933;
+            /* Official Saffron */
+            width: 225px;
+            height: 50px;
+        }
+
+        #middle {
+            background-color: #FFFFFF;
+            /* Pure White */
+            width: 225px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bluecircle {
+            width: 42px;
+            height: 42px;
+            display: block;
+            /* Optional: Make the chakra rotate slightly as the flag moves */
+            animation: charka-move 3s ease-in-out infinite alternate;
+        }
+
+        #bottom {
+            background-color: #138808;
+            /* Official India Green */
+            width: 225px;
+            height: 50px;
+        }
+
+        h1 {
+    /* 1. Apply the gradient as a background image */
+    background: linear-gradient(to bottom,
+            #FF671F 0%, #FF671F 33.33%,
+            #FFFFFF 33.33%, #FFFFFF 66.66%,
+            #046A38 66.66%, #046A38 100%);
+
+    /* 2. Clip the background so it only fills the text letters */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Make the actual text color transparent so the background shows through */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    
+    /* Optional: A subtle dark text shadow can help the white middle stripe stand out on light backgrounds */
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2)); 
+}
+
+        /* Keyframes for the Flying/Waving Effect */
+        @keyframes fly {
+            0% {
+                transform: rotate(0deg) skewY(0deg) scaleX(1);
+            }
+
+            50% {
+                transform: rotate(1deg) skewY(2deg) scaleX(0.98);
+            }
+
+            100% {
+                transform: rotate(-1deg) skewY(-2deg) scaleX(1);
+            }
+        }
+
+        /* Subtle shift for the inner chakra to match the wave */
+        @keyframes charka-move {
+            0% {
+                transform: translateX(0px) scaleX(1);
+            }
+
+            100% {
+                transform: translateX(-1px) scaleX(0.95);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flag-structure">
+        <div id="bar"></div>
+
+        <div class="flag-stripes">
+            <div id="top"></div>
+            <div id="middle">
+                <img id="bluecircle" src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg"
+                    alt="Ashoka Chakra">
+            </div>
+            <div id="bottom"></div>
+        </div>
+        <h1>Happpy Independance Day</h1>
+    </div>
+
+</body>
+
+</html>
