@@ -1,32 +1,15 @@
-
-h1 {
-    font-size: 24px;
-    color: #6a2f2f;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: josefin sans, sans-serif;
-}
-
-div {
-    height: 120px;
-    width: 70%;
-    margin: 10px;
-    padding: 10px;
-    border: 1px dotted #db2d2d;
-    border-radius: 25px;
-    border-top: 5px solid #c13506;
-    border-bottom: 5px solid #009a31;
-    border-left: 5px solid #eff9ff;
-    border-right: 5px solid #dae7ef;
-    background-color: #f8ffe8;
-    font-family: Arial, sans-serif;
-}
-button {
-    display: block;
-    margin: 20px auto;
-    background-color: #00792a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-}
+.add-to-bag {
+        background-color: rgb(22, 177, 22);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 15px;
+      }
+.wishlist {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 2px solid black;
+        padding: 10px 20px;
+        border-radius: 15px;
+        margin-top: 10px;
+      }
