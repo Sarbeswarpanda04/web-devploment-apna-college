@@ -17,7 +17,7 @@
       animation-direction: alternate;
       animation-fill-mode: forwards;
     }
-    @keyframes fontanimation {
+    /* @keyframes fontanimation {
       0% {
         font-size: 20px;
         color: rgb(234, 132, 0);
@@ -40,6 +40,18 @@
       to {
         color: #002b16;
         background-color: rgb(145, 103, 252);
+      }
+    } */
+    @media(min-width : 400px) {
+      h1{
+        color: rgb(255, 255, 255);
+        background-color: blueviolet;
+      }
+    }
+    @media(orientation: landscape) {
+      h1{
+        color: rgb(176, 21, 21);
+        background-color: rgb(207, 177, 236);
       }
     }
   </style>
