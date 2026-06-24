@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    .box {
+      height: 100px;
+      width: 300px;
+      background-color: pink;
+      animation-name: coloranimation, fontanimation;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+    }
+    @keyframes fontanimation {
+      from {
+          font-size: 20px;
+      }
+      to {
+          font-size: 50px;
+      }
+    }
+    @keyframes coloranimation {
+      from {
+        color: #000;
+        background-color: pink;
+      }
+      to {
+        color: #002b16;
+        background-color: rgb(145, 103, 252);
+      }
+    }
+  </style>
+</head>
+<body>
+   <h1>Animation</h1>
+   <div class="box"> This is a box</div>
+</body>
+</html>
