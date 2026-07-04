@@ -109,3 +109,29 @@ a{
   height: 2rem;
   width: fit-content;
 }
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #121212;
+}
+.sticky-nav-icons {
+  margin-left: 0.5rem;
+}
+.sticky-nav-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.nav-iteam{
+  margin-right: 1rem;
+}
+.dark-badge{
+  background-color: #121212;
+  color: white;
+}
