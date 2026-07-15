@@ -1,5 +1,5 @@
 let primary = ["Red", "Yellow", "Blue"];
 
-index = primary.indexOf("Blue");
+includes = primary.includes("Blue")
 
-console.log(index)
+console.log(includes)
