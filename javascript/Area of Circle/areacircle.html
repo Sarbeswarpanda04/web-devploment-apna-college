@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area of Circle</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#dbeafe,#f8fafc);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:1000px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    display:flex;
+    overflow:hidden;
+}
+
+.left{
+    width:35%;
+    padding:35px;
+    background:#eff6ff;
+}
+
+.left h1{
+    color:#2563eb;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    font-size:18px;
+    border:2px solid #3b82f6;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.result{
+    margin-top:25px;
+    padding:15px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.result h2{
+    color:#2563eb;
+}
+
+.right{
+    width:65%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f8fafc;
+}
+
+svg{
+    width:550px;
+    height:550px;
+    background:white;
+    border:2px solid #d1d5db;
+    border-radius:12px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <h1>⭕ Area of Circle</h1>
+
+        <label>Enter Radius</label>
+
+        <input
+            type="number"
+            id="radius"
+            placeholder="Example: 12">
+
+        <button onclick="drawCircle()">
+            Calculate & Draw
+        </button>
+
+        <div class="result">
+            <h2>Area</h2>
+            <h1><span id="area">0.00</span> sq. units</h1>
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <svg id="svg" width="550" height="550"></svg>
+
+    </div>
+
+</div>
+
+<script src="areacircle.js"></script>
+
+</body>
+</html>
