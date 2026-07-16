@@ -1,154 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App using Prompt</title>
 
     <style>
-        body{
-            margin:0;
-            padding:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:linear-gradient(135deg,#4facfe,#00f2fe);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-        .container{
-            background:#fff;
-            padding:30px;
-            border-radius:15px;
-            width:450px;
-            text-align:center;
-            box-shadow:0 10px 30px rgba(0,0,0,0.2);
-        }
+      .container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        width: 450px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
 
-        h1{
-            color:#333;
-            margin-bottom:15px;
-        }
+      table th,
+      table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
 
-        p{
-            color:#555;
-            line-height:1.6;
-        }
+      table th {
+        background: #007bff;
+        color: white;
+      }
 
-        button{
-            margin-top:20px;
-            padding:12px 25px;
-            border:none;
-            border-radius:8px;
-            background:#007bff;
-            color:white;
-            font-size:16px;
-            cursor:pointer;
-            transition:0.3s;
-        }
+      table tr:nth-child(even) {
+        background: #f8f8f8;
+      }
 
-        button:hover{
-            background:#0056b3;
-        }
+      hr {
+        margin: 25px 0;
+      }
 
-        code{
-            background:#f4f4f4;
-            padding:2px 5px;
-            border-radius:5px;
-        }
+      h1 {
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #555;
+        line-height: 1.6;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        background: #007bff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+
+      code {
+        background: #f4f4f4;
+        padding: 2px 5px;
+        border-radius: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-    <h1>📝 Todo Application</h1>
+      <h1>📝 Todo Application</h1>
 
-    <p>Click the button below to start the Todo App.</p>
+      <p>Click the button below to start the Todo App.</p>
 
-    <button onclick="startTodo()">Start Todo App</button>
+      <button onclick="startTodo()">Start Todo App</button>
 
-    <hr>
+      <hr />
 
-    <h3>📌 Available Commands</h3>
+      <h3>📌 Available Commands</h3>
 
-    <table>
+      <table>
         <tr>
-            <th>Command</th>
-            <th>Description</th>
+          <th>Command</th>
+          <th>Description</th>
         </tr>
         <tr>
-            <td><b>add</b></td>
-            <td>Add a new task</td>
+          <td><b>add</b></td>
+          <td>Add a new task</td>
         </tr>
         <tr>
-            <td><b>list</b></td>
-            <td>Display all tasks</td>
+          <td><b>list</b></td>
+          <td>Display all tasks</td>
         </tr>
         <tr>
-            <td><b>delete</b></td>
-            <td>Delete a task using its index</td>
+          <td><b>delete</b></td>
+          <td>Delete a task using its index</td>
         </tr>
         <tr>
-            <td><b>quit</b></td>
-            <td>Exit the application</td>
+          <td><b>quit</b></td>
+          <td>Exit the application</td>
         </tr>
-    </table>
+      </table>
 
-    <p style="margin-top:20px;color:#666;">
+      <p style="margin-top: 20px; color: #666">
         💡 Open the browser <b>Console (F12 → Console)</b> to view the output.
-    </p>
-</div>
+      </p>
+    </div>
 
-<script>
-function startTodo(){
+    <script>
+      function startTodo() {
+        let todo = [];
 
-    let todo = [];
+        let req = prompt("Please enter your request : ");
+        console.log(req);
 
-    let req = prompt("Please enter your request : ");
-    console.log(req);
-
-    while(true){
-
-        if(req == "quit"){
+        while (true) {
+          if (req == "quit") {
             console.log("Quitting the application");
             break;
-        }
+          }
 
-        if(req == "list"){
-
+          if (req == "list") {
             console.log("-------------------");
 
-            for(let i=0;i<todo.length;i++){
-                console.log(i, todo[i]);
+            for (let i = 0; i < todo.length; i++) {
+              console.log(i, todo[i]);
             }
 
             console.log("-------------------");
-
-        }else if(req == "add"){
-
+          } else if (req == "add") {
             let task = prompt("Please enter your task : ");
             todo.push(task);
             console.log(task);
             console.log("Task Added");
-
-        }else if(req == "delete"){
-
+          } else if (req == "delete") {
             let idx = prompt("Please enter the task index");
-            todo.splice(idx,1);
+            todo.splice(idx, 1);
             console.log("Task Deleted");
-
-        }else{
-
+          } else {
             console.log("Invalid Request");
+          }
 
+          req = prompt("Please enter your request : ");
         }
-
-        req = prompt("Please enter your request : ");
-
-    }
-
-}
-</script>
-
-</body>
+      }
+    </script>
+  </body>
 </html>
