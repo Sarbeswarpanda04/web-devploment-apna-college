@@ -39,3 +39,5 @@ console.log(classInfo.sarbeswar);
 console.log(classInfo.aman.name);
 console.log(classInfo.shradha.name);
 console.log(classInfo.sarbeswar.name);
+
+console.log(typeof classInfo);
