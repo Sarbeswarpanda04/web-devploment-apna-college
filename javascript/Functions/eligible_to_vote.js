@@ -8,3 +8,4 @@ function eligibleToVote(name,age) {
 
 eligibleToVote("Sarbeswar",20);
 eligibleToVote("Soumya",17);
+eligibleToVote("Sandhya",21);
