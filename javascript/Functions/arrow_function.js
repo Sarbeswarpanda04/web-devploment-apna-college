@@ -9,3 +9,9 @@ const cube = (n) =>{
 }
 console.log(cube(3));
 console.log(cube);
+
+const pow = (p,q) =>{
+  return Math.pow(p,q); // p**q
+}
+console.log(pow(2,3));
+console.log(pow);
