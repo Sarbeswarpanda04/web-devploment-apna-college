@@ -15,3 +15,9 @@ const pow = (p,q) =>{
 }
 console.log(pow(2,3));
 console.log(pow);
+
+const hello = () =>{
+  console.log("Hello");
+}
+hello();
+console.log(hello);
