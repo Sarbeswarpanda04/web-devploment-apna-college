@@ -17,3 +17,8 @@ const student = {
 let {username, password} = student;
 console.log(username);
 console.log(password);
+
+let {username : user, password: secret, city : place = "bbsr"} = student;
+console.log(user);
+console.log(secret);
+console.log(place);
