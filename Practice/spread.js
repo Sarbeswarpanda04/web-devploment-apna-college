@@ -6,3 +6,6 @@ console.log(...arr);
 console.log(arr);
 console.log(Math.min(...arr));
 console.log(Math.max(...arr));
+
+console.log(..."Sarbeswar");
+console.log("Sarbeswar");
