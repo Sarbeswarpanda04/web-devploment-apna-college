@@ -1,6 +1,6 @@
 let data = {
   email : "sarbeswar@sarbeswarpanda.me",
-  password : "Sarbeswar@123"
+  password : "djysuhvn7hajvw"
 };
 
 let dataCopy = {...data, id : 123}
